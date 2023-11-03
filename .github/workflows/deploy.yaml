@@ -32,7 +32,7 @@ jobs:
           fetch-depth: 20
           lfs: null
       - run: npm install --production=false
-      - run: npm global install eslint
+      - run: npm install -g eslint
       - run: npm lint
   docker-build:
     needs: lint_code

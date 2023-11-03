@@ -32,9 +32,10 @@ jobs:
           fetch-depth: 20
           lfs: null
       - run: npm install --production=false
-      - run: npm global add eslint
+      - run: npm global install eslint
       - run: npm lint
   docker-build:
+    needs: lint_code
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     timeout-minutes: 60

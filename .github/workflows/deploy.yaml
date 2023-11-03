@@ -33,7 +33,7 @@ jobs:
           lfs: null
       - run: npm install --production=false
       - run: npm install -g eslint
-      - run: npm lint
+      - run: npm run lint
   docker-build:
     needs: lint_code
     runs-on: ubuntu-latest

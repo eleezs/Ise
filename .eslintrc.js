@@ -12,5 +12,6 @@ module.exports = {
       "no-extra-semi": "off",
       "no-prototype-builtins": "off"
   },
-  "extends": ["eslint:recommended"]
+  "extends": ["eslint:recommended"],
+  "exclude": ['dist']
 };

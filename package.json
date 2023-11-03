@@ -1,0 +1,52 @@
+{
+  "name": "ise-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "start:dev": "nest start --watch",
+    "prestart:prod": "npm run build",
+    "start:prod": "node dist/main.js",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:migrate": "sequelize db:migrate",
+    "db:undo:migrate": "sequelize db:migrate:undo",
+    "db:seed": "sequelize db:seed:all",
+    "lint": "eslint src"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^3.1.1",
+    "@nestjs/core": "^9.0.0",
+    "@nestjs/jwt": "^10.1.1",
+    "@nestjs/passport": "^10.0.2",
+    "@nestjs/platform-express": "^9.0.0",
+    "bcrypt": "^5.1.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.52.0",
+    "express": "^4.17.1",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.33.0",
+    "sequelize-cli": "^6.6.1",
+    "sequelize-typescript": "^2.1.5"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^9.0.0",
+    "@nestjs/schematics": "^9.0.0",
+    "@types/passport-jwt": "^3.0.12",
+    "@types/passport-local": "^1.0.37",
+    "@types/sequelize": "^4.28.17",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.5"
+  }
+}

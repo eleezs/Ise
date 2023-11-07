@@ -35,7 +35,6 @@ jobs:
       - run: npm install -g eslint
       - run: npm run lint
   docker-build:
-    needs: lint_code
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     timeout-minutes: 60

@@ -12,7 +12,7 @@ const config_1 = require("@nestjs/config");
 const auth_module_1 = require("./auth/auth.module");
 const schedule_module_1 = require("./schedule/schedule.module");
 const user_module_1 = require("./user/user.module");
-const role_permission_module_1 = require("./role_permission/role_permission.module");
+const permission_module_1 = require("./permission/permission.module");
 const database_module_1 = require("./core/database/database.module");
 let AppModule = class AppModule {
 };
@@ -21,7 +21,7 @@ AppModule = __decorate([
         imports: [
             config_1.ConfigModule.forRoot({ isGlobal: true }),
             database_module_1.DatabaseModule,
-            auth_module_1.AuthModule, schedule_module_1.ScheduleModule, user_module_1.UserModule, role_permission_module_1.RolePermissionModule
+            auth_module_1.AuthModule, schedule_module_1.ScheduleModule, user_module_1.UserModule, permission_module_1.PermissionModule
         ],
     })
 ], AppModule);

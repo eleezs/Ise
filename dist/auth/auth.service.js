@@ -68,14 +68,12 @@ let AuthService = class AuthService {
         return __awaiter(this, void 0, void 0, function* () {
             // find if user exist with this email
             const user = yield this.userService.findOneByEmail(username);
-            if (!user) {
+            if (!user)
                 return null;
-            }
             // find if user password match
             const match = yield this.comparePassword(pass, user.password);
-            if (!match) {
+            if (!match)
                 return null;
-            }
             const _a = user['dataValues'], { password } = _a, result = __rest(_a, ["password"]);
             return result;
         });

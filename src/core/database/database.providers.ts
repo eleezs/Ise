@@ -3,7 +3,6 @@ import { SEQUELIZE, DEVELOPMENT, TEST, PRODUCTION } from '../constants';
 import { databaseConfig } from './ database.config';
 import { User, Schedule, Subject } from './models'
 
-
 export const databaseProviders = [{
     provide: SEQUELIZE,
     useFactory: async () => {
@@ -19,10 +18,11 @@ export const databaseProviders = [{
             config = databaseConfig.production;
             break;
         default:
-          	config = databaseConfig.development;
+            config = databaseConfig.development;
       }
       const sequelize = new Sequelize(config);
       sequelize.addModels([User, Subject, Schedule]);
       return sequelize;
     },
 }];
+

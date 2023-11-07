@@ -4,3 +4,4 @@ export declare const TEST = "test";
 export declare const PRODUCTION = "production";
 export declare const USER_REPOSITORY = "USER_REPOSITORY";
 export declare const SCHEDULE_REPOSITORY = "SCHEDULE_REPOSITORY";
+export declare const PERMISSION_REPOSITORY = "PERMISSION_REPOSITORY";

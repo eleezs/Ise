@@ -55,8 +55,8 @@ jobs:
           --build-arg DB_PASSWORD=$DB_PASSWORD
           --build-arg NODE_ENV=$NODE_ENV
           --build-arg JWT_SECRET=$JWT_SECRET
-          -t gcr.io/fresh-start-281907/ise-prod-api:latest .
-      - run: 'docker push gcr.io/fresh-start-281907/ise-prod-api:latest'
+          -t gcr.io/ise-test-404109/ise-prod-api:latest .
+      - run: 'docker push gcr.io/ise-test-404109/ise-prod-api:latest'
   gcloud-deploy:
     needs: docker-build
     runs-on: ubuntu-latest

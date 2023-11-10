@@ -55,6 +55,8 @@ jobs:
           --build-arg DB_NAME=$DB_NAME
           --build-arg DB_USERNAME=$DB_USERNAME
           --build-arg DB_PASSWORD=$DB_PASSWORD
+          --build-arg JWTKEY=$JWTKEY
+          --build-arg TOKEN_EXPIRATION=$TOKEN_EXPIRATION
           --build-arg NODE_ENV=$NODE_ENV
           -t gcr.io/ise-test-404109/ise-prod-api:latest .
       - run: 'docker push gcr.io/ise-test-404109/ise-prod-api:latest'

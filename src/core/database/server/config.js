@@ -35,7 +35,7 @@ const config = {
         "rejectUnauthorized": false
       }
     },
-    // "logging": false,
+    "logging": false,
     "seederStorage": "sequelize",
     "timezone": "+01:00",
   },

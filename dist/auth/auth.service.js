@@ -54,7 +54,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthService = void 0;
 const common_1 = require("@nestjs/common");
-const bcrypt = __importStar(require("bcrypt"));
+const bcrypt = __importStar(require("bcryptjs"));
 const dotenv = __importStar(require("dotenv"));
 const jwt_1 = require("@nestjs/jwt");
 const users_service_1 = require("../user/users.service");

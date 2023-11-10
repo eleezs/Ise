@@ -14,6 +14,8 @@ env:
   DB_USERNAME: '${{ secrets.DB_USERNAME }}'
   DB_PASSWORD: '${{ secrets.DB_PASSWORD }}'
   NODE_ENV: '${{ secrets.NODE_ENV }}'
+  JWTKEY: '${{ secrets.JWTKEY }}'
+  TOKEN_EXPIRATION: '${{ secrets.TOKEN_EXPIRATION }}'
   GCP_PROJECT_ID: '${{ secrets.GCP_PROJECT_ID }}'
   GCP_ZONE: '${{ secrets.GCP_ZONE }}'
   GKE_CLUSTER: '${{ secrets.GKE_CLUSTER }}'
@@ -54,7 +56,6 @@ jobs:
           --build-arg DB_USERNAME=$DB_USERNAME
           --build-arg DB_PASSWORD=$DB_PASSWORD
           --build-arg NODE_ENV=$NODE_ENV
-          --build-arg JWT_SECRET=$JWT_SECRET
           -t gcr.io/ise-test-404109/ise-prod-api:latest .
       - run: 'docker push gcr.io/ise-test-404109/ise-prod-api:latest'
   gcloud-deploy:

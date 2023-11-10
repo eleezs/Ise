@@ -24,6 +24,7 @@ RUN npm install --include=dev
 RUN npm run db:migrate
 # RUN npm run db:seed
 
+
 RUN npm run build
 EXPOSE 3006
 CMD [ "npm", "run", "start:prod" ]

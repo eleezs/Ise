@@ -20,4 +20,5 @@ export class AuthController {
   async login(@Body() user: Signin) {
     return await this.authService.login(user);
   }
+  
 }

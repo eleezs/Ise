@@ -14,6 +14,7 @@ const schedule_module_1 = require("./schedule/schedule.module");
 const user_module_1 = require("./user/user.module");
 const role_permission_module_1 = require("./role_permission/role_permission.module");
 const database_module_1 = require("./core/database/database.module");
+const app_controller_1 = require("./app.controller");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -23,6 +24,7 @@ AppModule = __decorate([
             database_module_1.DatabaseModule,
             auth_module_1.AuthModule, schedule_module_1.ScheduleModule, user_module_1.UserModule, role_permission_module_1.RolePermissionModule
         ],
+        controllers: [app_controller_1.AppController],
     })
 ], AppModule);
 exports.AppModule = AppModule;

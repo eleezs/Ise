@@ -22,7 +22,7 @@ RUN npm install -g sequelize-cli
 RUN npm install --include=dev
 
 RUN npm run db:migrate
-# RUN npm run db:seed
+RUN npm run db:seed
 
 
 RUN npm run build

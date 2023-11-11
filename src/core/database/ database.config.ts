@@ -25,6 +25,6 @@ export const databaseConfig: IDatabaseConfig = {
         password: process.env.DB_PASSWORD,
         database: process.env.DB_NAME_PRODUCTION,
         host: process.env.DB_HOST,
-        dialect: process.env.DB_DIALECT
+        dialect: process.env.DB_DIALECT || 'postgres'
     },
 };

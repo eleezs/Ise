@@ -40,5 +40,6 @@ spec:
   - port: 80
     protocol: TCP
     targetPort: 3006
+    name: http
   selector:
     app: ise-prod-api
